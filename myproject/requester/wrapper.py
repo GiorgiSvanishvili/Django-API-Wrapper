@@ -4,7 +4,7 @@ from .models import Info
 
 def requester():
     data = Info.objects.all()
-    if Info.id == '43324003' in data:
+    if '43324003' == data.id():
         return data
     else:
         response = requests.get("https://api.github.com/users/Luff3x").json()
